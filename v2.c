@@ -7,7 +7,7 @@ int main(void)
 {
     int    job, pages, copies, duplex, urgent;
     int    sheets_per_copy, sheets;
-    double charge, surcharge, total;
+    double charge, extra_fee, total;
 
     printf("========================================================\n");
     printf("      PHOTOCOPY AND PRINT SHOP - JOB QUEUE SYSTEM       \n");
@@ -26,8 +26,8 @@ int main(void)
     sheets          = sheets_per_copy * copies;
 
     charge    = sheets * PRICE_PER_SHEET;
-    surcharge = charge * URGENT_RATE * urgent;
-    total     = charge + surcharge;
+    extra_fee = charge * URGENT_RATE * urgent;
+    total     = charge + extra_fee;
 
     printf("\n");
     printf("--------------------------------------------------------\n");
@@ -36,7 +36,7 @@ int main(void)
            "CHARGE", "URGENT+", "TOTAL");
     printf("%-6d%6d%7d%7d%7d%7d%9.2f%9.2f%9.2f\n",
            job, pages, copies, duplex, urgent, sheets,
-           charge, surcharge, total);
+           charge, extra_fee, total);
     printf("--------------------------------------------------------\n");
     return 0;
 }
