@@ -38,7 +38,8 @@ void read_job(void)
 
 double calculate_total(void)
 {
-    sheets = duplex ? (pages + 1) / 2 : pages;
+    sheets = pages;
+    sheets = sheets - duplex * (pages / 2);
     sheets = sheets * copies;
 
     charge = sheets * PRICE_PER_SHEET;
@@ -51,14 +52,14 @@ double calculate_total(void)
 void print_job(void)
 {
     printf("Job no: %d\n", job_no);
-    printf("Pages: %d\n",pages);
-    printf("Copies: %d\n", copies);
-    printf("Duplex: %d\n", duplex);
-    printf("Urgent: %d\n",urgent);
-    printf("Sheets: %d\n",sheets);
-    printf("Charge: %.2f\n",charge);
-    printf("Urgent fee: %.2f\n", extra_fee);
-    printf("Total: %.2f\n", total);
+    printf("Pages:%d\n",pages);
+    printf("Copies:%d\n", copies);
+    printf("Duplex:%d\n", duplex);
+    printf("Urgent:%d\n",urgent);
+    printf("Sheets:%d\n",sheets);
+    printf("Charge:%.2f\n",charge);
+    printf("Urgent fee:%.2f\n", extra_fee);
+    printf("Total:%.2f\n", total);
 }
 
 int main(void)
