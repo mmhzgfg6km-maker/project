@@ -38,7 +38,7 @@ void read_job(void)
 
 double calculate_total(void)
 {
-    sheets = pages;
+    sheets =pages;
     sheets = sheets - duplex * (pages / 2);
     sheets = sheets * copies;
 
