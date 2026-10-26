@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int job_no, pages,copies, duplex, urgent;
+int job_no,pages,copies, duplex, urgent;
 
 void banner(void)
 {
-    printf("======= PHOTOCOPY AND PRINT SHOP =======\n");
+    printf("=======PHOTOCOPY AND PRINT SHOP=======\n");
 }
 
 void show_menu(void)
